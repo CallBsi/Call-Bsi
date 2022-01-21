@@ -12,6 +12,7 @@ miniTocMaxHeadingLevel: 3
 
 {% data reusables.actions.enterprise-beta %}
 {% data reusables.actions.enterprise-github-hosted-runners %}
+{% data reusables.actions.ae-beta %}
 
 ## Sobre as expressões
 
@@ -125,11 +126,11 @@ Retorna `verdadeiro` se a `pesquisa` contiver `item`. Se a `pesquisa` for uma ar
 
 #### Exemplo de uso de array
 
-`contains(github.event.issue.labels.*.name, 'bug')` retorna se a issue relacionada ao evento possui uma etiqueta de "erro".
+`contains(github.event.issue.labels.*.name, 'bug')`
 
 #### Exemplo de uso de string
 
-`contains('Hello world', 'llo')` retorna `true`.
+`contains('Hello world', 'llo')` retorna `true`
 
 ### startsWith
 
@@ -139,7 +140,7 @@ Retorna `true` quando `searchString` começar com `searchValue`. Essa função n
 
 #### Exemplo
 
-`startsWith('Hello world', 'He')` retorna `true`.
+`startsWith('Hello world', 'He')` retorna `true`
 
 ### endsWith
 
@@ -149,7 +150,7 @@ Retorna `true` se `searchString` terminar com `searchValue`. Essa função não 
 
 #### Exemplo
 
-`endsWith('Hello world', 'ld')` retorna `true`.
+`endsWith('Hello world', 'ld')` retorna `true`
 
 ### format
 
@@ -159,19 +160,19 @@ Substitui valores na `string` pela variável `replaceValueN`. As variáveis na `
 
 #### Exemplo
 
+Retorna 'Hello Mona the Octocat'
+
 `format('Hello {0} {1} {2}', 'Mona', 'the', 'Octocat')`
 
-Retorna 'Hello Mona the Octocat'.
-
 #### Exemplo de escape de chaves
+
+Returna '{Hello Mona the Octocat!}'
 
 {% raw %}
 ```js
 format('{{Hello {0} {1} {2}!}}', 'Mona', 'the', 'Octocat')
 ```
 {% endraw %}
-
-Returna '{Hello Mona the Octocat!}'.
 
 ### join
 
@@ -266,9 +267,9 @@ Cria um hash para arquivos de `pacote-lock.json` e `Gemfile.lock` no repositóri
 
 `hashFiles('**/package-lock.json', '**/Gemfile.lock')`
 
-## Funções de verificação de status
+## Funções de verificação de status de trabalho
 
-Você pode usar as funções de verificação de status a seguir como expressões nas condicionais `if`. Uma verificação de status padrão de `success()` é aplicada, a menos que você inclua uma dessas funções. Para obter mais informações sobre as condicionais `if`, consulte "[Sintaxe fluxo de trabalho para o GitHub Actions](/articles/workflow-syntax-for-github-actions/#jobsjob_idif)" e "[Sintaxe de metadados para o GitHub Composite Actions](/actions/creating-actions/metadata-syntax-for-github-actions/#runsstepsif)".
+Você pode usar as funções de verificação de status a seguir como expressões nas condicionais `if`. Uma verificação de status padrão de `success()` é aplicada, a menos que você inclua uma dessas funções. Para obter mais informações sobre condicionais `if`, consulte "[Sintaxe de fluxo de trabalho para o GitHub Actions](/articles/workflow-syntax-for-github-actions/#jobsjob_idif)".
 
 ### success
 
@@ -305,7 +306,7 @@ se: {% raw %}${{ cancelled() }}{% endraw %}
 
 ### failure
 
-Retorna `verdadeiro` quando ocorre uma falha no trabalho em qualquer etapa anterior. Se você tem uma cadeia de trabalhos dependentes, `fracasso()` retorna `verdadeiro` se algum trabalho ancestral falhar.
+Retorna `verdadeiro` quando ocorre uma falha no trabalho em qualquer etapa anterior.
 
 #### Exemplo
 
@@ -315,32 +316,6 @@ etapas:
   - nome: Ocorreu uma falha no trabalho
     if: {% raw %}${{ failure() }}{% endraw %}
 ```
-
-### Avaliar status explicitamente
-
-Em vez de usar um dos métodos acima, você pode avaliar o status do trabalho ou ação composta que está executando a etapa diretamente:
-
-#### Exemplo para etapa de fluxo de trabalho
-
-```yaml
-etapas:
-  ...
-  - name: The job has failed
-    if: {% raw %}${{ job.status == 'failure' }}{% endraw %}
-```
-
-Isso é o mesmo que usar `if: failure()` em uma etapa do trabalho.
-
-#### Exemplo da etapa de ação composta
-
-```yaml
-etapas:
-  ...
-  - name: The composite action has failed
-    if: {% raw %}${{ github.action_status == 'failure' }}{% endraw %}
-```
-
-Isso é o mesmo que usar `if: failure()` em um passo de ação composta.
 
 ## Filtros de objeto
 
