@@ -1,6 +1,6 @@
 ---
-title: Autenticación
-intro: 'Manten tu cuenta y datos seguros con características como {% ifversion not ghae %}la autenticación bifactoria, {% endif %}SSH{% ifversion not ghae %},{% endif %} y la verificación de firmas de las confirmaciones.'
+title: Authentication
+intro: 'Keep your account and data secure with features like {% ifversion not ghae %}two-factor authentication, {% endif %}SSH{% ifversion not ghae %},{% endif %} and commit signature verification.'
 redirect_from:
   - /categories/56/articles
   - /categories/ssh

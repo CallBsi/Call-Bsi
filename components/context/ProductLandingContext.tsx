@@ -51,7 +51,6 @@ export type ProductLandingContextT = {
   featuredArticles: Array<{
     label: string // Guides
     viewAllHref?: string // If provided, adds a "View All ->" to the header
-    viewAllTitleText?: string // Adds 'title' attribute text for the "View All" href
     articles: Array<FeaturedLink>
   }>
   changelogUrl?: string

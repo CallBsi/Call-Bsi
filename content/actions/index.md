@@ -46,8 +46,6 @@ versions:
 children:
   - /quickstart
   - /learn-github-actions
-  - /using-workflows
-  - /using-jobs
   - /managing-workflow-runs
   - /automating-builds-and-tests
   - /deployment
