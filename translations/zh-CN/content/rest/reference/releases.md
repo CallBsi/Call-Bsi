@@ -1,5 +1,5 @@
 ---
-title: 版本发布
+title: Releases
 intro: 'The releases API allows you to create, modify, and delete releases and release assets.'
 allowTitleToDifferFromFilename: true
 versions:
@@ -14,16 +14,10 @@ miniTocMaxHeadingLevel: 3
 
 {% note %}
 
-**注：**发布 API 取代了下载 API。 您可以从返回发行版和发行版资产的 API 端点检索下载次数和浏览器下载 URL。
+**Note:** The Releases API replaces the Downloads API. You can retrieve the download count and browser download URL from the endpoints in this API that return releases and release assets.
 
 {% endnote %}
 
 {% for operation in currentRestOperations %}
-  {% unless operation.subcategory %}{% include rest_operation %}{% endunless %}
-{% endfor %}
-
-## Release assets
-
-{% for operation in currentRestOperations %}
-  {% if operation.subcategory == 'assets' %}{% include rest_operation %}{% endif %}
+  {% if operation.subcategory == 'releases' %}{% include rest_operation %}{% endif %}
 {% endfor %}

@@ -1,5 +1,5 @@
 ---
-title: Gist でコンテンツを編集・共有する
+title: Editing and sharing content with gists
 intro: ''
 redirect_from:
   - /categories/23/articles

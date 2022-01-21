@@ -39,6 +39,8 @@ You can store a variety of projects in {% data variables.product.product_name %}
 
 {% endif %}
 
+{% include tool-switcher %}
+
 {% webui %}
 
 {% data reusables.repositories.create_new %}
@@ -66,6 +68,8 @@ Congratulations! You've successfully created your first repository, and initiali
 {% endcli %}
 
 ## Commit your first change
+
+{% include tool-switcher %}
 
 {% webui %}
 

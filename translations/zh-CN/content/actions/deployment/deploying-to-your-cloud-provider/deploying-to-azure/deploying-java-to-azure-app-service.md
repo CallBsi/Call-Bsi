@@ -17,7 +17,7 @@ topics:
 {% data reusables.actions.enterprise-github-hosted-runners %}
 
 
-## 简介
+## Introduction
 
 This guide explains how to use {% data variables.product.prodname_actions %} to build and deploy a Java project to [Azure App Service](https://azure.microsoft.com/services/app-service/).
 
@@ -31,13 +31,13 @@ This guide explains how to use {% data variables.product.prodname_actions %} to 
 
 {% endif %}
 
-## 基本要求
+## Prerequisites
 
-在创建 {% data variables.product.prodname_actions %} 工作流程之前，首先需要完成以下设置步骤：
+Before creating your {% data variables.product.prodname_actions %} workflow, you will first need to complete the following setup steps:
 
 {% data reusables.actions.create-azure-app-plan %}
 
-1. 创建 Web 应用。
+1. Create a web app.
 
    For example, you can use the Azure CLI to create an Azure App Service web app with a Java runtime:
 
@@ -49,7 +49,7 @@ This guide explains how to use {% data variables.product.prodname_actions %} to 
        --runtime "JAVA|11-java11"
    ```
 
-   在上面的命令中，将参数替换为您自己的值，其中 `MY_WEBAPP_NAME` 是 Web 应用的新名称。
+   In the command above, replace the parameters with your own values, where `MY_WEBAPP_NAME` is a new name for the web app.
 
 {% data reusables.actions.create-azure-publish-profile %}
 
@@ -57,13 +57,13 @@ This guide explains how to use {% data variables.product.prodname_actions %} to 
 1. Optionally, configure a deployment environment. {% data reusables.actions.about-environments %}
 {% endif %}
 
-## 创建工作流程
+## Creating the workflow
 
-完成先决条件后，可以继续创建工作流程。
+Once you've completed the prerequisites, you can proceed with creating the workflow.
 
 The following example workflow demonstrates how to build and deploy a Java project to Azure App Service when there is a push to the `main` branch.
 
-确保在工作流程 `env` 中将 `AZURE_WEBAPP_NAME` 密钥设置为您创建的 web 应用程序名称。 If you want to use a Java version other than `11`, change `JAVA_VERSION`.
+Ensure that you set `AZURE_WEBAPP_NAME` in the workflow `env` key to the name of the web app you created. If you want to use a Java version other than `11`, change `JAVA_VERSION`.
 
 {% data reusables.actions.delete-env-key %}
 
@@ -125,10 +125,10 @@ jobs:
           package: '*.jar'
 ```
 
-## 其他资源
+## Additional resources
 
-以下资源也可能有用：
+The following resources may also be useful:
 
 * For the original starter workflow, see [`azure-webapps-java-jar.yml`](https://github.com/actions/starter-workflows/blob/main/deployments/azure-webapps-java-jar.yml) in the {% data variables.product.prodname_actions %} `starter-workflows` repository.
-* 用于部署 Web 应用的操作是正式的 Azure [`Azure/webapps-deploy`](https://github.com/Azure/webapps-deploy) 操作。
+* The action used to deploy the web app is the official Azure [`Azure/webapps-deploy`](https://github.com/Azure/webapps-deploy) action.
 * For more examples of GitHub Action workflows that deploy to Azure, see the [actions-workflow-samples](https://github.com/Azure/actions-workflow-samples) repository.
