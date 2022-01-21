@@ -18,6 +18,8 @@ A codespace will stop running after a period of inactivity. You can specify the 
 
 {% endwarning %}
 
+{% include tool-switcher %}
+
 {% webui %}
 
 ## Setting your default timeout

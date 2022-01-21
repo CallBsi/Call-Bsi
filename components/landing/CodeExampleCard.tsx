@@ -14,7 +14,7 @@ export const CodeExampleCard = ({ example }: Props) => {
       href={`https://github.com/${example.href}`}
     >
       <div className="p-4">
-        <h3 className="f4" dangerouslySetInnerHTML={{ __html: example.title }} />
+        <h4 dangerouslySetInnerHTML={{ __html: example.title }} />
         <p
           className="mt-2 mb-4 color-fg-muted"
           dangerouslySetInnerHTML={{ __html: example.description }}

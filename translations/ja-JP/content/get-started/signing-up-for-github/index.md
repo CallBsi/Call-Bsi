@@ -1,5 +1,5 @@
 ---
-title: GitHub へのサインアップ
+title: Signing up for GitHub
 intro: 'Start using {% data variables.product.prodname_dotcom %} for yourself or your team.'
 redirect_from:
   - /articles/signing-up-for-github

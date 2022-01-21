@@ -1,7 +1,7 @@
 ---
-title: Referência
-shortTitle: Referência
-intro: Veja documentação de referência para aprender os recursos disponíveis na API REST do GitHub.
+title: Reference
+shortTitle: Reference
+intro: View reference documentation to learn about the resources available in the GitHub REST API.
 versions:
   fpt: '*'
   ghes: '*'
@@ -19,32 +19,31 @@ children:
   - /codes-of-conduct
   - /code-scanning
   - /codespaces
-  - /collaborators
   - /commits
-  - /dependabot
+  - /collaborators
   - /deployments
   - /emojis
   - /enterprise-admin
   - /gists
   - /git
+  - /pages
   - /gitignore
   - /interactions
   - /issues
   - /licenses
   - /markdown
   - /meta
-  - /metrics
   - /migrations
   - /oauth-authorizations
   - /orgs
   - /packages
-  - /pages
   - /projects
   - /pulls
   - /rate-limit
   - /reactions
   - /releases
   - /repos
+  - /repository-metrics
   - /scim
   - /search
   - /secret-scanning
