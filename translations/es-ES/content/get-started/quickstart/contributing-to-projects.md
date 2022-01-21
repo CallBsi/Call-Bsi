@@ -34,6 +34,7 @@ You've successfully forked the Spoon-Knife repository, but so far, it only exist
 
 You can clone your fork with the command line, {% data variables.product.prodname_cli %}, or {% data variables.product.prodname_desktop %}.
 
+{% include tool-switcher %}
 {% webui %}
 
 1. En {% data variables.product.product_name %}, dirígete a **tu bifurcación** del repositorio Spoon-Knife.
@@ -85,6 +86,7 @@ Go ahead and make a few changes to the project using your favorite text editor, 
 
 When you're ready to submit your changes, stage and commit your changes. `git add .` tells Git that you want to include all of your changes in the next commit. `git commit` takes a snapshot of those changes.
 
+{% include tool-switcher %}
 {% webui %}
 
 ```shell
@@ -105,7 +107,7 @@ git commit -m "a short description of the change"
 
 {% desktop %}
 
-Para obtener más información sobre cómo probar y confirmar los cambios en {% data variables.product.prodname_desktop %}, consulta la sección "[Confirmar y revisar los cambios a tu proyecto](/desktop/contributing-and-collaborating-using-github-desktop/making-changes-in-a-branch/committing-and-reviewing-changes-to-your-project#selecting-changes-to-include-in-a-commit)".
+For more information about how to stage and commit changes in {% data variables.product.prodname_desktop %}, see "[Committing and reviewing changes to your project](/desktop/contributing-and-collaborating-using-github-desktop/making-changes-in-a-branch/committing-and-reviewing-changes-to-your-project#selecting-changes-to-include-in-a-commit)."
 
 {% enddesktop %}
 
@@ -113,6 +115,7 @@ When you stage and commit files, you essentially tell Git, "Okay, take a snapsho
 
 Right now, your changes only exist locally. When you're ready to push your changes up to {% data variables.product.product_name %}, push your changes to the remote.
 
+{% include tool-switcher %}
 {% webui %}
 
 ```shell
