@@ -1,7 +1,7 @@
 ---
-title: Importar tus proyectos a GitHub
-intro: 'Puedes importar tu código fuente a {% data variables.product.product_name %} utilizando diversos métodos diferentes.'
-shortTitle: Importar tus proyectos
+title: Importing your projects to GitHub
+intro: 'You can import your source code to {% data variables.product.product_name %} using a variety of different methods.'
+shortTitle: Importing your projects
 redirect_from:
   - /categories/67/articles
   - /categories/importing

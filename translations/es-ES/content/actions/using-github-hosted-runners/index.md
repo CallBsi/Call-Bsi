@@ -1,6 +1,6 @@
 ---
-title: Utilizar los ejecutores hospedados en GitHub
-intro: Puedes utilizar los ejecutores de GitHub para ejecutar tus flujos de trabajo de las GitHub Actions.
+title: Using GitHub-hosted runners
+intro: You can use GitHub's runners to execute your GitHub Actions workflows.
 versions:
   fpt: '*'
   ghec: '*'
@@ -8,7 +8,7 @@ versions:
 children:
   - /about-github-hosted-runners
   - /customizing-github-hosted-runners
-shortTitle: Utilizar los ejecutores hospedados en GitHub
+shortTitle: Use GitHub-hosted runners
 ---
 
 {% data reusables.actions.enterprise-beta %}
